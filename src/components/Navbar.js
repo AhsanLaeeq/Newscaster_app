@@ -5,6 +5,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 const Navbar = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false); // State for dark mode
 
   // Function to handle link click and collapse navbar
   const handleNavLinkClick = () => {
@@ -16,12 +17,20 @@ const Navbar = () => {
     setIsNavbarOpen(!isNavbarOpen); // Toggle the navbar open/close state
   };
 
+  // Function to toggle dark mode and close the navbar on mobile
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode); // Toggle dark mode state
+    document.body.classList.toggle("bg-dark", !isDarkMode); // Toggle dark background
+    document.body.classList.toggle("text-light", !isDarkMode); // Toggle light text color
+    setIsNavbarOpen(false); // Close the navbar if open (for mobile)
+  };
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg fixed-top bg-dark navbar-dark">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="#">
-            Navbar
+          <Link className="navbar-brand" to="/">
+            NewsCaster
           </Link>
 
           <button
@@ -34,6 +43,7 @@ const Navbar = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
+
           <div
             className={`collapse navbar-collapse ${isNavbarOpen ? "show" : ""}`}
             id="navbarSupportedContent"
@@ -47,7 +57,7 @@ const Navbar = () => {
                   onClick={handleNavLinkClick}
                 >
                   Business
-                </Link>{" "}
+                </Link>
               </li>
               <li className="nav-item">
                 <Link
@@ -57,7 +67,7 @@ const Navbar = () => {
                   onClick={handleNavLinkClick}
                 >
                   Entertainment
-                </Link>{" "}
+                </Link>
               </li>
               <li className="nav-item">
                 <Link
@@ -67,7 +77,7 @@ const Navbar = () => {
                   onClick={handleNavLinkClick}
                 >
                   General
-                </Link>{" "}
+                </Link>
               </li>
               <li className="nav-item">
                 <Link
@@ -77,7 +87,7 @@ const Navbar = () => {
                   onClick={handleNavLinkClick}
                 >
                   Health
-                </Link>{" "}
+                </Link>
               </li>
               <li className="nav-item">
                 <Link
@@ -87,7 +97,7 @@ const Navbar = () => {
                   onClick={handleNavLinkClick}
                 >
                   Science
-                </Link>{" "}
+                </Link>
               </li>
               <li className="nav-item">
                 <Link
@@ -97,7 +107,7 @@ const Navbar = () => {
                   onClick={handleNavLinkClick}
                 >
                   Sports
-                </Link>{" "}
+                </Link>
               </li>
               <li className="nav-item">
                 <Link
@@ -110,6 +120,15 @@ const Navbar = () => {
                 </Link>
               </li>
             </ul>
+
+            {/* Dark Mode Button inside the collapse section */}
+            <button
+              className="btn btn-outline-light ms-3"
+              onClick={toggleDarkMode}
+              aria-label="Toggle Dark Mode"
+            >
+              {isDarkMode ? "Light Mode" : "Dark Mode"}
+            </button>
           </div>
         </div>
       </nav>

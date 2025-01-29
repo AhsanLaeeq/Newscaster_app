@@ -1,38 +1,39 @@
-.App {
-  text-align: center;
+.spinner-img {
+  width: 200px;  /* Adjust the size of the spinner */
+  height: 200px; /* Adjust the size of the spinner */
+  margin: 0 auto; /* Center the spinner horizontally */
+  display: block; /* Ensures the image behaves like a block element */
+  margin-top: 3rem;
+}
+/* Styles for the active link */
+.active-link {
+background-color: #007bff;  /* Blue background */
+color: white;  /* White text */
+font-weight: bold;  /* Bold text */
+border-radius: 5px;  /* Optional: Rounded corners */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.containert{
+  margin-top: 4rem;
+  /* margin-bottom: 2rem; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/* Dark mode card styles */
+body.bg-dark .card {
+  background-color: #333;
+  color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body.bg-dark .btn-dark {
+  background-color: #6c757d;
+  border-color: #6c757d;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Optional: Adjust the text color of the card title and text in dark mode */
+body.bg-dark .card-title, 
+body.bg-dark .card-text {
+  color: #fff;
 }
