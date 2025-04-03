@@ -84,13 +84,13 @@ If you have any suggestions or would like to contribute to the project, feel fre
 
 For any feedback, please open an issue or contact me directly:
 
-- **LinkedIn**: [Ahsan Laeeq](https://www.linkedin.com/in/ahsanlaeeq/)
+- **LinkedIn**: [Ahsan Laeeq](https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile))
 
 ---
 
 ## 👨‍💻 **Created by AhsanLaeeq**
 
-- **Connect with me** on [LinkedIn](https://www.linkedin.com/in/ahsanlaeeq/).
+- **Connect with me** on [LinkedIn](https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile).
 - **GitHub**: [Ahsan Laeeq](https://github.com/AhsanLaeeq)
 
 ---
